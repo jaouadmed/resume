@@ -1,0 +1,49 @@
+.collapsed-section {
+    max-height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.collapsed-section .read-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 38px 0;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.01), white);
+    z-index: 2;
+}
+
+.read-more>a {
+    position: absolute;
+    left: 0;
+    width: 30%;
+    left: 35%;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    bottom: 0;
+}
+
+.listing-large .listing-event .data.right h5 {
+    display: block;
+    margin-left: 15px;
+    font-size: 15px;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+.listing-large .listing-event .data.right h5 strong{
+  font-weight: 700;
+}
+
+.listing-large .listing-event .data.right li {
+    margin-bottom: 0;
+    line-height: 28px;
+}
+
+.timeline .timeline-inner.education{
+    margin-bottom: 20px;
+}
