@@ -544,7 +544,7 @@ img.signature{
 
 .timeline .timeline-inner .name {
     float: left;
-    font-size: 18px;
+    
     padding-right: 4px;
     position: relative;
     text-align: right;
@@ -558,7 +558,7 @@ img.signature{
     content: " ";
     height: 20px;
     position: absolute;
-    right: -2em;
+    right: -1.95em;
     top: 1px;
     width: 20px;
 	 -webkit-background-clip: padding-box; 
@@ -599,7 +599,6 @@ img.signature{
 
 .timeline .timeline-inner .name span.date {
     color:#999999;
-    font-size: 13.5px;
     font-weight: 400;
 }
 
@@ -611,7 +610,6 @@ img.signature{
 	-ms-border-radius:3px;
 	-o-border-radius: 3px;
     color: #2a2a2a;
-    font-size: 12.5px;
     font-weight: 400;
     margin-left: 10px;
     padding: 2px 7px;
@@ -1646,7 +1644,7 @@ ul.hb-list li h6 {
 }
 
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-device-width: 480px) and (max-device-width: 767px) {
 	input, textarea{-webkit-appearance: none;-webkit-border-radius:0;}
 	.container {position: relative;}
 	.content{padding: 100px 40px;}
@@ -1701,12 +1699,12 @@ ul.hb-list li h6 {
 	.input-columns .column1, .input-columns .column2{width:100%;}
 	.input-columns .column1 .column-inner{padding:0;}
 	.block-info .col-md-4:not(:last-child){margin-bottom:30px;}
-
+    body * { font-size: xx-large;}
 	
 }
 
 
-@media only screen and (max-width:479px) {
+@media only screen and (max-device-width:479px) {
 	input, textarea{-webkit-appearance: none;-webkit-border-radius:0;}
 	.container {position: relative;}
 	.content{padding: 100px 40px;}
@@ -1767,7 +1765,8 @@ ul.hb-list li h6 {
 	.input-columns .column1, .input-columns .column2{width:100%;}
 	.input-columns .column1 .column-inner{padding:0;}
 	.block-info .col-md-4:not(:last-child){margin-bottom:30px;}
-	
+    body * { font-size: xx-large;}
+
 }
 
 
