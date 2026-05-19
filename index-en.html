@@ -6,34 +6,32 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ── Reset ──────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 a { color: inherit; text-decoration: none; }
 
-/* ── Page / Body ─────────────────────────────────────── */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  font-size: 8.5pt;
+  font-size: 8pt;
   color: #374151;
   background: #fff;
   width: 210mm;
-  min-height: 297mm;
-  margin: 0 auto;
+  height: 297mm;
+  overflow: hidden;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
 
-/* ── Header ──────────────────────────────────────────── */
+/* ── Header ── */
 .header {
   background: #1c3557;
   color: #fff;
   display: flex;
   align-items: center;
-  gap: 22px;
-  padding: 22px 28px;
+  gap: 18px;
+  padding: 13px 24px;
 }
 .header-photo img {
-  width: 84px; height: 84px;
+  width: 76px; height: 76px;
   border-radius: 50%;
   border: 3px solid rgba(255,255,255,0.35);
   object-fit: cover;
@@ -42,27 +40,22 @@ body {
 }
 .header-info { flex: 1; }
 .header-name {
-  font-size: 22pt;
+  font-size: 20pt;
   font-weight: 700;
   letter-spacing: -0.4px;
   line-height: 1;
   color: #fff;
 }
 .header-title {
-  font-size: 9.5pt;
+  font-size: 8.5pt;
   font-weight: 400;
   color: #93c5fd;
   margin-top: 3px;
-  margin-bottom: 10px;
-  letter-spacing: 0.2px;
+  margin-bottom: 8px;
 }
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 18px;
-}
+.contacts { display: flex; flex-wrap: wrap; gap: 3px 14px; }
 .contact {
-  font-size: 7.5pt;
+  font-size: 7pt;
   color: #cbd5e1;
   display: flex;
   align-items: center;
@@ -71,190 +64,124 @@ body {
 .contact svg { flex-shrink: 0; }
 .contact a { color: #93c5fd; }
 
-/* ── Two-column body ─────────────────────────────────── */
-.layout {
-  display: flex;
-  min-height: calc(297mm - 128px);
-}
+/* ── Layout ── */
+.layout { display: flex; height: calc(297mm - 102px); }
 
-/* ── Sidebar (left) ──────────────────────────────────── */
 .sidebar {
   width: 31%;
   background: #f8fafc;
   border-right: 1px solid #e2e8f0;
-  padding: 18px 16px;
+  padding: 11px 13px;
   flex-shrink: 0;
+  overflow: hidden;
 }
-
-/* ── Main content (right) ────────────────────────────── */
 .main {
   flex: 1;
-  padding: 18px 22px;
+  padding: 11px 18px;
+  overflow: hidden;
 }
 
-/* ── Shared section ──────────────────────────────────── */
-.section { margin-bottom: 14px; }
+/* ── Sections ── */
+.section { margin-bottom: 9px; }
 
 .section-title {
-  font-size: 7pt;
+  font-size: 6.5pt;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.6px;
   color: #1c3557;
   border-bottom: 2px solid #3b82f6;
-  padding-bottom: 3px;
-  margin-bottom: 8px;
+  padding-bottom: 2px;
+  margin-bottom: 6px;
 }
 
-/* ── Experience / timeline items ─────────────────────── */
-.item { margin-bottom: 10px; }
+/* ── Items ── */
+.item { margin-bottom: 7px; }
 .item:last-child { margin-bottom: 0; }
 
 .item-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 8px;
+  gap: 6px;
   margin-bottom: 1px;
 }
 .item-org {
-  font-size: 8.5pt;
+  font-size: 8pt;
   font-weight: 600;
   color: #1c3557;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 .item-date {
-  font-size: 7pt;
+  font-size: 6.5pt;
   font-weight: 500;
   color: #3730a3;
   background: #e0e7ff;
-  padding: 1px 6px;
-  border-radius: 10px;
+  padding: 1px 5px;
+  border-radius: 9px;
   white-space: nowrap;
   flex-shrink: 0;
   margin-top: 1px;
 }
 .item-role {
-  font-size: 8pt;
+  font-size: 7.5pt;
   font-weight: 600;
   color: #2563eb;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 .item-tech {
-  font-size: 7pt;
+  font-size: 6.5pt;
   color: #6b7280;
   font-style: italic;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 .item-desc {
-  font-size: 7.5pt;
-  color: #4b5563;
-  line-height: 1.45;
-}
-
-/* ── Education ───────────────────────────────────────── */
-.edu-degree {
-  font-size: 8pt;
-  font-weight: 600;
-  color: #1c3557;
-  line-height: 1.3;
-}
-.edu-school {
-  font-size: 7.5pt;
-  color: #6b7280;
-  margin-top: 1px;
-}
-
-/* ── Certifications ──────────────────────────────────── */
-.cert-name {
-  font-size: 8pt;
-  font-weight: 600;
-  color: #1c3557;
-}
-.cert-detail {
-  font-size: 7.5pt;
-  color: #4b5563;
-  margin-top: 1px;
-}
-.cert-link { color: #2563eb; }
-
-/* ── Projects ────────────────────────────────────────── */
-.proj-name {
-  font-size: 8pt;
-  font-weight: 600;
-  color: #1c3557;
-}
-.proj-desc {
-  font-size: 7.5pt;
+  font-size: 7pt;
   color: #4b5563;
   line-height: 1.4;
-  margin-top: 1px;
 }
 
-/* ── Skill tags ──────────────────────────────────────── */
-.skill-group { margin-bottom: 9px; }
+/* ── Education ── */
+.edu-degree { font-size: 7.5pt; font-weight: 600; color: #1c3557; line-height: 1.25; }
+.edu-school  { font-size: 7pt; color: #6b7280; margin-top: 1px; }
+
+/* ── Cert / Projects ── */
+.cert-name { font-size: 7.5pt; font-weight: 600; color: #1c3557; }
+.cert-detail { font-size: 7pt; color: #4b5563; margin-top: 1px; }
+.cert-link { color: #2563eb; }
+.proj-name { font-size: 7.5pt; font-weight: 600; color: #1c3557; }
+.proj-desc { font-size: 6.5pt; color: #4b5563; line-height: 1.35; margin-top: 1px; }
+
+/* ── Skill tags ── */
+.skill-group { margin-bottom: 6px; }
 .skill-group:last-child { margin-bottom: 0; }
-.skill-group-title {
-  font-size: 7.5pt;
-  font-weight: 600;
-  color: #1c3557;
-  margin-bottom: 4px;
-}
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3px;
-}
+.skill-group-title { font-size: 7pt; font-weight: 600; color: #1c3557; margin-bottom: 3px; }
+.tags { display: flex; flex-wrap: wrap; gap: 2px; }
 .tag {
-  font-size: 6.5pt;
+  font-size: 6pt;
   font-weight: 500;
   background: #dbeafe;
   color: #1e40af;
-  padding: 2px 6px;
-  border-radius: 9px;
-}
-
-/* ── Languages ───────────────────────────────────────── */
-.lang-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.lang-name { font-size: 7.5pt; font-weight: 500; color: #374151; }
-.lang-level {
-  font-size: 6.5pt;
-  color: #6b7280;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  padding: 1px 6px;
+  padding: 1px 5px;
   border-radius: 8px;
 }
 
-/* ── Summary ─────────────────────────────────────────── */
-.summary-text {
-  font-size: 8pt;
-  line-height: 1.55;
-  color: #4b5563;
-}
+/* ── Languages ── */
+.lang-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.lang-name { font-size: 7pt; font-weight: 500; }
+.lang-level { font-size: 6pt; color: #6b7280; background: #f1f5f9; border: 1px solid #e2e8f0; padding: 1px 5px; border-radius: 7px; }
 
-/* ── Interests ───────────────────────────────────────── */
-.interests-text {
-  font-size: 7.5pt;
-  color: #4b5563;
-  line-height: 1.7;
-}
+/* ── Summary ── */
+.summary-text { font-size: 7.5pt; line-height: 1.5; color: #4b5563; }
 
-/* ── Divider ─────────────────────────────────────────── */
-.divider {
-  border: none;
-  border-top: 1px solid #e2e8f0;
-  margin: 12px 0;
-}
+/* ── Interests ── */
+.interests-text { font-size: 7pt; color: #4b5563; line-height: 1.6; }
 
-/* ── Print ───────────────────────────────────────────── */
+/* ── Divider ── */
+.divider { border: none; border-top: 1px solid #e2e8f0; margin: 8px 0; }
+
 @media print {
-  body { width: 210mm; }
+  body { width: 210mm; height: 297mm; }
   .header { background: #1c3557 !important; }
   .sidebar { background: #f8fafc !important; }
   .tag { background: #dbeafe !important; }
@@ -263,187 +190,137 @@ body {
 </head>
 <body>
 
-<!-- ═══════════════════════════════════ HEADER ══════════════════════════════════ -->
+<!-- HEADER -->
 <div class="header">
   <div class="header-photo">
     <img src="img/img_cv.jpeg" alt="Mohamed JAOUAD">
   </div>
   <div class="header-info">
     <div class="header-name">Mohamed JAOUAD</div>
-    <div class="header-title">Techno-Functional Consultant &nbsp;·&nbsp; Software &amp; Data Engineering</div>
+    <div class="header-title">Senior Techno-Functional Consultant &nbsp;·&nbsp; Software &amp; Data Engineering</div>
     <div class="contacts">
       <span class="contact">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
         <a href="mailto:jaouadmohamed0@gmail.com">jaouadmohamed0@gmail.com</a>
       </span>
       <span class="contact">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
         +212 639 066 684
       </span>
       <span class="contact">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         <a href="https://linkedin.com/in/jaouadmed">linkedin.com/in/jaouadmed</a>
       </span>
       <span class="contact">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
         <a href="https://github.com/jaouadmed">github.com/jaouadmed</a>
       </span>
       <span class="contact">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Sala Al Jadida, Morocco
       </span>
     </div>
   </div>
 </div>
 
-<!-- ════════════════════════════════════ BODY ═══════════════════════════════════ -->
+<!-- BODY -->
 <div class="layout">
 
-  <!-- ─────────────────────── SIDEBAR ─────────────────────── -->
+  <!-- SIDEBAR -->
   <div class="sidebar">
 
-    <!-- SKILLS -->
     <div class="section">
       <div class="section-title">Technical Skills</div>
 
       <div class="skill-group">
         <div class="skill-group-title">Programming Languages</div>
         <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">Python</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">C / C++</span>
-          <span class="tag">GDL / Prolog</span>
-          <span class="tag">PHP</span>
-          <span class="tag">VB.Net</span>
-          <span class="tag">Octave / Matlab</span>
+          <span class="tag">Java</span><span class="tag">Python</span><span class="tag">JavaScript</span>
+          <span class="tag">C / C++</span><span class="tag">GDL / Prolog</span><span class="tag">PHP</span>
+          <span class="tag">VB.Net</span><span class="tag">Octave / Matlab</span>
         </div>
       </div>
 
       <div class="skill-group">
         <div class="skill-group-title">Frameworks &amp; Platforms</div>
         <div class="tags">
-          <span class="tag">Spring Boot</span>
-          <span class="tag">Spring Cloud</span>
-          <span class="tag">Angular</span>
-          <span class="tag">JEE</span>
-          <span class="tag">JHipster</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">JavaFX</span>
-          <span class="tag">Android</span>
+          <span class="tag">Spring Boot</span><span class="tag">Spring Cloud</span><span class="tag">Angular</span>
+          <span class="tag">JEE</span><span class="tag">JHipster</span><span class="tag">Node.js</span>
+          <span class="tag">JavaFX</span><span class="tag">Android</span>
         </div>
       </div>
 
       <div class="skill-group">
         <div class="skill-group-title">Data &amp; Big Data</div>
         <div class="tags">
-          <span class="tag">Kafka</span>
-          <span class="tag">Hadoop 2.0</span>
-          <span class="tag">Elasticsearch</span>
-          <span class="tag">Logstash ETL</span>
-          <span class="tag">Kibana</span>
-          <span class="tag">Scrapy / XPath</span>
-          <span class="tag">D3.js</span>
-          <span class="tag">ML / Deep Learning</span>
+          <span class="tag">Kafka</span><span class="tag">Hadoop 2.0</span><span class="tag">Elasticsearch</span>
+          <span class="tag">Logstash ETL</span><span class="tag">Kibana</span><span class="tag">Scrapy</span>
+          <span class="tag">D3.js</span><span class="tag">ML / Deep Learning</span>
         </div>
       </div>
 
       <div class="skill-group">
         <div class="skill-group-title">Databases</div>
         <div class="tags">
-          <span class="tag">MySQL</span>
-          <span class="tag">SQL Server</span>
-          <span class="tag">Oracle</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">MS Access</span>
+          <span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">Oracle</span>
+          <span class="tag">MongoDB</span><span class="tag">MS Access</span>
         </div>
       </div>
 
       <div class="skill-group">
         <div class="skill-group-title">DevOps &amp; Tools</div>
         <div class="tags">
-          <span class="tag">Docker</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Ansible AWX</span>
-          <span class="tag">Git</span>
-          <span class="tag">ELK Stack</span>
-          <span class="tag">Open Distro</span>
+          <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Ansible AWX</span>
+          <span class="tag">Git</span><span class="tag">ELK Stack</span><span class="tag">Open Distro</span>
         </div>
       </div>
 
       <div class="skill-group">
         <div class="skill-group-title">Architecture &amp; Modeling</div>
         <div class="tags">
-          <span class="tag">Microservices</span>
-          <span class="tag">UML</span>
-          <span class="tag">Merise</span>
-          <span class="tag">Design Patterns</span>
-          <span class="tag">OOP</span>
+          <span class="tag">Microservices</span><span class="tag">UML</span><span class="tag">Merise</span>
+          <span class="tag">Design Patterns</span><span class="tag">OOP</span>
         </div>
       </div>
 
       <div class="skill-group">
         <div class="skill-group-title">Domain &amp; CMS</div>
         <div class="tags">
-          <span class="tag">GraphTalk</span>
-          <span class="tag">BDOC</span>
-          <span class="tag">PrestaShop</span>
-          <span class="tag">WordPress</span>
+          <span class="tag">GraphTalk</span><span class="tag">BDOC</span>
+          <span class="tag">PrestaShop</span><span class="tag">WordPress</span>
         </div>
       </div>
     </div>
 
     <hr class="divider">
 
-    <!-- LANGUAGES -->
     <div class="section">
       <div class="section-title">Languages</div>
-      <div class="lang-row">
-        <span class="lang-name">Arabic</span>
-        <span class="lang-level">Native</span>
-      </div>
-      <div class="lang-row">
-        <span class="lang-name">Tamazight (Amazigh)</span>
-        <span class="lang-level">Native</span>
-      </div>
-      <div class="lang-row">
-        <span class="lang-name">French</span>
-        <span class="lang-level">Fluent (C1)</span>
-      </div>
-      <div class="lang-row">
-        <span class="lang-name">English</span>
-        <span class="lang-level">Professional (B2+)</span>
-      </div>
+      <div class="lang-row"><span class="lang-name">Arabic</span><span class="lang-level">Native</span></div>
+      <div class="lang-row"><span class="lang-name">Tamazight</span><span class="lang-level">Native</span></div>
+      <div class="lang-row"><span class="lang-name">French</span><span class="lang-level">Fluent (C1)</span></div>
+      <div class="lang-row"><span class="lang-name">English</span><span class="lang-level">Professional (B2+)</span></div>
     </div>
 
     <hr class="divider">
 
-    <!-- INTERESTS -->
     <div class="section">
       <div class="section-title">Interests</div>
-      <div class="interests-text">
-        Music &nbsp;·&nbsp; Basketball &nbsp;·&nbsp; Fishing<br>
-        Competitive Programming
-      </div>
+      <div class="interests-text">Music &nbsp;·&nbsp; Basketball &nbsp;·&nbsp; Fishing<br>Competitive Programming</div>
     </div>
 
-  </div><!-- /sidebar -->
+  </div>
 
-  <!-- ─────────────────────── MAIN ────────────────────── -->
+  <!-- MAIN -->
   <div class="main">
 
-    <!-- SUMMARY -->
     <div class="section">
       <div class="section-title">Professional Summary</div>
       <p class="summary-text">
-        Software engineer and techno-functional consultant with 4+ years of experience in enterprise insurance solutions, data engineering and full-stack development.
-        Proven track record delivering production monitoring systems, ERP solutions and e-commerce platforms.
-        Passionate about scalable architectures, data pipelines and clean code.
-        Holds a state engineering degree in Big Data &amp; Cloud Computing.
+        Software engineer and senior techno-functional consultant with 5+ years of experience in enterprise insurance solutions, data engineering and full-stack development. Proven track record delivering production monitoring systems, ERP platforms and e-commerce solutions. Passionate about scalable architectures, data pipelines and clean code. Holds a state engineering degree in Big Data &amp; Cloud Computing.
       </p>
     </div>
 
-    <!-- EXPERIENCE -->
     <div class="section">
       <div class="section-title">Professional Experience</div>
 
@@ -452,11 +329,9 @@ body {
           <div class="item-org">DXC Technology Morocco &mdash; Technopolis, Sala Al Jadida</div>
           <span class="item-date">Jul 2021 &ndash; Present</span>
         </div>
-        <div class="item-role">Jr. Techno-Functional Consultant</div>
+        <div class="item-role">Senior Techno-Functional Consultant</div>
         <div class="item-tech">GDL &middot; GraphTalk &middot; BDOC &middot; SQL &middot; Batch Processing</div>
-        <div class="item-desc">
-          Delivering functional analysis and technical development on DXC's enterprise insurance platform. Core responsibilities: data extraction pipelines, batch data processing and CRM document management using in-house tooling (GraphTalk, BDOC). Also handles production support and functional specifications.
-        </div>
+        <div class="item-desc">Technical and functional development on DXC's enterprise insurance platform: data extraction pipelines, batch processing and CRM document management. Writes functional specs and handles production support.</div>
       </div>
 
       <div class="item">
@@ -466,21 +341,17 @@ body {
         </div>
         <div class="item-role">End-of-Studies Internship (PFE)</div>
         <div class="item-tech">ELK Stack &middot; Open Distro for ES &middot; Ansible AWX &middot; Logstash</div>
-        <div class="item-desc">
-          Designed and implemented a production application monitoring system. Built automated log centralization, alerting and Kibana dashboards for DevOps teams using the full ELK stack orchestrated with Ansible AWX.
-        </div>
+        <div class="item-desc">Designed and implemented a production monitoring system: log centralization, automated alerting and Kibana dashboards for DevOps teams.</div>
       </div>
 
       <div class="item">
         <div class="item-header">
           <div class="item-org">CameraPack &mdash; Tiflet / Rabat</div>
-          <span class="item-date">Jun &ndash; Aug 2019 &middot; 2 months</span>
+          <span class="item-date">Jun – Aug 2019 &middot; 2 months</span>
         </div>
         <div class="item-role">Software Engineering Intern</div>
         <div class="item-tech">JEE &middot; Spring Boot &middot; Angular &middot; JHipster</div>
-        <div class="item-desc">
-          Built a lightweight web-based ERP covering inventory, procurement and reporting modules. Full-stack development from database modeling to Angular frontend, plus a company showcase website.
-        </div>
+        <div class="item-desc">Built a lightweight web-based ERP (inventory, procurement, reporting) and a company showcase website, full-stack.</div>
       </div>
 
       <div class="item">
@@ -490,9 +361,7 @@ body {
         </div>
         <div class="item-role">Observation Internship</div>
         <div class="item-tech">Java Android &middot; SQLite &middot; Google Sheets &middot; Apps Script</div>
-        <div class="item-desc">
-          Developed an Android app for daily monitoring of Morocco's major dams, enabling field agents to record and visualise water-level data in real time.
-        </div>
+        <div class="item-desc">Android app for daily monitoring of Morocco's major dams — field data entry and real-time visualisation.</div>
       </div>
 
       <div class="item">
@@ -502,7 +371,7 @@ body {
         </div>
         <div class="item-role">BTS End-of-Studies Internship</div>
         <div class="item-tech">VB.Net &middot; MS Access</div>
-        <div class="item-desc">Built a desktop application for public procurement document management.</div>
+        <div class="item-desc">Desktop application for public procurement document management.</div>
       </div>
 
       <div class="item">
@@ -512,15 +381,13 @@ body {
         </div>
         <div class="item-role">Introductory Internship</div>
         <div class="item-tech">VB6 &middot; MS Access</div>
-        <div class="item-desc">Developed a desktop application for scholarship file management for baccalaureate graduates.</div>
+        <div class="item-desc">Desktop application for scholarship file management for baccalaureate graduates.</div>
       </div>
 
     </div>
 
-    <!-- EDUCATION -->
     <div class="section">
       <div class="section-title">Education</div>
-
       <div class="item">
         <div class="item-header">
           <div class="edu-degree">State Engineering Degree — Big Data &amp; Cloud Computing (II-BDCC)</div>
@@ -528,7 +395,6 @@ body {
         </div>
         <div class="edu-school">ENSET-Mohammedia, Mohammedia</div>
       </div>
-
       <div class="item">
         <div class="item-header">
           <div class="edu-degree">BTS — Information Systems Development (DSI)</div>
@@ -536,7 +402,6 @@ body {
         </div>
         <div class="edu-school">Ibn-Sina High School, Kenitra</div>
       </div>
-
       <div class="item">
         <div class="item-header">
           <div class="edu-degree">Baccalaureate — Physics &amp; Chemistry (PC)</div>
@@ -544,25 +409,19 @@ body {
         </div>
         <div class="edu-school">Oued-Edahab High School, Tiflet</div>
       </div>
-
     </div>
 
-    <!-- CERTIFICATIONS -->
     <div class="section">
-      <div class="section-title">Certifications</div>
+      <div class="section-title">Certification</div>
       <div class="item">
         <div class="item-header">
           <div class="cert-name">Machine Learning — Stanford University / Coursera</div>
           <span class="item-date">Dec 2019</span>
         </div>
-        <div class="cert-detail">
-          Grade: <strong>97.3%</strong> &nbsp;&middot;&nbsp;
-          <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/Y3WS3FQZWC6J">Verify credential ↗</a>
-        </div>
+        <div class="cert-detail">Grade: <strong>97.3%</strong> &nbsp;&middot;&nbsp; <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/Y3WS3FQZWC6J">Verify credential ↗</a></div>
       </div>
     </div>
 
-    <!-- PROJECTS -->
     <div class="section">
       <div class="section-title">Notable Projects &amp; Freelance</div>
 
@@ -571,7 +430,7 @@ body {
           <div class="proj-name">E-commerce Marketplace — smileshop.ma &nbsp;<span style="font-weight:400;color:#6b7280;">(BBS, Casablanca)</span></div>
           <span class="item-date">2020–2021 · Freelance</span>
         </div>
-        <div class="proj-desc">PrestaShop marketplace for Beyond Banking Services. Full store setup, theme customisation and payment integration.</div>
+        <div class="proj-desc">PrestaShop marketplace for Beyond Banking Services — full setup, theme customisation and payment integration.</div>
       </div>
 
       <div class="item">
@@ -584,33 +443,22 @@ body {
 
       <div class="item">
         <div class="item-header">
-          <div class="proj-name">Student Note &amp; Course Manager &nbsp;<span style="font-weight:400;color:#6b7280;">(BTS PFE)</span></div>
+          <div class="proj-name">Student Course &amp; Note Manager &nbsp;<span style="font-weight:400;color:#6b7280;">(BTS PFE)</span></div>
           <span class="item-date">2017</span>
         </div>
-        <div class="proj-desc">Android + SQLite app for note-taking, course management and revision aid — BTS Ibn-Sina, Kenitra.</div>
+        <div class="proj-desc">Android + SQLite app for note-taking, course management and revision — BTS Ibn-Sina, Kenitra.</div>
       </div>
 
       <div class="item">
         <div class="item-header">
-          <div class="proj-name">ESU National Public Speaking Competition &nbsp;<span style="font-weight:400;color:#6b7280;">(ENSET)</span></div>
-          <span class="item-date">2019</span>
+          <div class="proj-name">Web Dev Training &nbsp;<span style="font-weight:400;color:#6b7280;">(AHDANE Association)</span> &nbsp;&middot;&nbsp; ESU Public Speaking Competition &nbsp;<span style="font-weight:400;color:#6b7280;">(ENSET, 2019)</span></div>
         </div>
-        <div class="proj-desc">Co-organised the national competition at ENSET-Mohammedia (2019 edition).</div>
-      </div>
-
-      <div class="item">
-        <div class="item-header">
-          <div class="proj-name">Web Development Training &nbsp;<span style="font-weight:400;color:#6b7280;">(AHDANE Association)</span></div>
-          <span class="item-date">2017</span>
-        </div>
-        <div class="proj-desc">Designed and delivered an introductory web development programme for youth members.</div>
       </div>
 
     </div>
 
-  </div><!-- /main -->
-
-</div><!-- /layout -->
+  </div>
+</div>
 
 </body>
 </html>
