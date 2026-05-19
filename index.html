@@ -1,679 +1,616 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-    <meta charset="utf-8" />
-    <link href="css/airesume.css" type="text/css" rel="stylesheet" media="all" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/base.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        *::-moz-selection {
-            background: #3ce01f;
-        }
-        
-        .sub-title {
-            text-align: center;
-        }
-        
-        .sub-title h2:before {
-            background: #3ce01f;
-        }
-        
-        .sub-title h2 {
-            font-size: 1.5em;
-        }
-        
-        .but:hover {
-            background: #3ce01f;
-            border: 1px solid #3ce01f;
-        }
-        
-        .emph-2 {
-            color: #3ce01f;
-        }
-        
-        .main-nav li a:before {
-            background: #3ce01f;
-        }
-        
-        .main-nav li a.active:before {
-            background: #3ce01f;
-        }
-        
-        .main-nav li a.active {
-            background: #3ce01f;
-        }
-        
-        .main-nav li a.active:after {
-            border-color: transparent transparent transparent #3ce01f;
-        }
-        
-        .content:after {
-            box-shadow: 0px 8px 25px -10px rgba(0, 0, 0, 0.35), 0px 15px 0px -8px #3ce01f, 0px 15px 0px -7px #3ce01f, 0px 16px 25px -10px rgba(0, 0, 0, 0.35), 0px 30px 0px -15px #3ce01f, 0px 30px 0px -14px #3ce01f;
-        }
-        
-        .content:before {
-            background: #3ce01f;
-        }
-        
-        .listing-inner:after {
-            background: #3ce01f;
-        }
-        
-        .listing a:hover {
-            color: #3ce01f;
-        }
-        
-        .timeline .timeline-inner .name:before {
-            background: #3ce01f;
-        }
-        
-        .timeline .timeline-inner .name span.date em {
-            background: #3ce01f;
-        }
-        
-        .timeline .timeline-inner .name span.date em:before {
-            border-color: transparent #3ce01f;
-        }
-        
-        .timeline {
-            padding-top: 15px;
-        }
-        
-        .listing-large-inner:after {
-            background: #3ce01f;
-        }
-        
-        ul.hb-list li span {
-            border: 1px solid #3ce01f;
-            color: #3ce01f;
-        }
-        
-        .rating span {
-            background: #3ce01f;
-        }
-        
-        .listing-large a:hover {
-            color: #3ce01f;
-        }
-        
-        .services:after {
-            background: #3ce01f;
-        }
-        
-        .block-service .ico {
-            color: #3ce01f;
-        }
-        
-        .post-meta li a {
-            box-shadow: 0 -3px 0 #3ce01f inset;
-        }
-        
-        .social a {
-            background: #3ce01f;
-        }
-        
-        .name h5 {
-            margin-bottom: 0;
-            font-size: 1em;
-            font-weight: bold;
-        }
-        
-        .name span {
-            font-weight: normal;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Mohamed JAOUAD — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+a { color: inherit; text-decoration: none; }
+
+/* ── Page / Body ─────────────────────────────────────── */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-size: 8.5pt;
+  color: #374151;
+  background: #fff;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ── Header ──────────────────────────────────────────── */
+.header {
+  background: #1c3557;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 22px 28px;
+}
+.header-photo img {
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.35);
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+.header-info { flex: 1; }
+.header-name {
+  font-size: 22pt;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: 1;
+  color: #fff;
+}
+.header-title {
+  font-size: 9.5pt;
+  font-weight: 400;
+  color: #93c5fd;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+}
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+.contact {
+  font-size: 7.5pt;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.contact svg { flex-shrink: 0; }
+.contact a { color: #93c5fd; }
+
+/* ── Two-column body ─────────────────────────────────── */
+.layout {
+  display: flex;
+  min-height: calc(297mm - 128px);
+}
+
+/* ── Sidebar (left) ──────────────────────────────────── */
+.sidebar {
+  width: 31%;
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  padding: 18px 16px;
+  flex-shrink: 0;
+}
+
+/* ── Main content (right) ────────────────────────────── */
+.main {
+  flex: 1;
+  padding: 18px 22px;
+}
+
+/* ── Shared section ──────────────────────────────────── */
+.section { margin-bottom: 14px; }
+
+.section-title {
+  font-size: 7pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: #1c3557;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+}
+
+/* ── Experience / timeline items ─────────────────────── */
+.item { margin-bottom: 10px; }
+.item:last-child { margin-bottom: 0; }
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 1px;
+}
+.item-org {
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: #1c3557;
+  line-height: 1.3;
+}
+.item-date {
+  font-size: 7pt;
+  font-weight: 500;
+  color: #3730a3;
+  background: #e0e7ff;
+  padding: 1px 6px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.item-role {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 2px;
+}
+.item-tech {
+  font-size: 7pt;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 3px;
+}
+.item-desc {
+  font-size: 7.5pt;
+  color: #4b5563;
+  line-height: 1.45;
+}
+
+/* ── Education ───────────────────────────────────────── */
+.edu-degree {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #1c3557;
+  line-height: 1.3;
+}
+.edu-school {
+  font-size: 7.5pt;
+  color: #6b7280;
+  margin-top: 1px;
+}
+
+/* ── Certifications ──────────────────────────────────── */
+.cert-name {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #1c3557;
+}
+.cert-detail {
+  font-size: 7.5pt;
+  color: #4b5563;
+  margin-top: 1px;
+}
+.cert-link { color: #2563eb; }
+
+/* ── Projects ────────────────────────────────────────── */
+.proj-name {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #1c3557;
+}
+.proj-desc {
+  font-size: 7.5pt;
+  color: #4b5563;
+  line-height: 1.4;
+  margin-top: 1px;
+}
+
+/* ── Skill tags ──────────────────────────────────────── */
+.skill-group { margin-bottom: 9px; }
+.skill-group:last-child { margin-bottom: 0; }
+.skill-group-title {
+  font-size: 7.5pt;
+  font-weight: 600;
+  color: #1c3557;
+  margin-bottom: 4px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.tag {
+  font-size: 6.5pt;
+  font-weight: 500;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 2px 6px;
+  border-radius: 9px;
+}
+
+/* ── Languages ───────────────────────────────────────── */
+.lang-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.lang-name { font-size: 7.5pt; font-weight: 500; color: #374151; }
+.lang-level {
+  font-size: 6.5pt;
+  color: #6b7280;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+
+/* ── Summary ─────────────────────────────────────────── */
+.summary-text {
+  font-size: 8pt;
+  line-height: 1.55;
+  color: #4b5563;
+}
+
+/* ── Interests ───────────────────────────────────────── */
+.interests-text {
+  font-size: 7.5pt;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* ── Divider ─────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 12px 0;
+}
+
+/* ── Print ───────────────────────────────────────────── */
+@media print {
+  body { width: 210mm; }
+  .header { background: #1c3557 !important; }
+  .sidebar { background: #f8fafc !important; }
+  .tag { background: #dbeafe !important; }
+}
+</style>
 </head>
-
 <body>
-    <div id="wrapper">
-        <!-- class="mt-150 mb-150" -->
-        <!--Container-->
-        <div class="" style="padding: 1em; margin-top: 40px;">
-            <!--Row-->
-            <div class="row ">
-                <div class="col-md-12 right-content pd-r0 pd-l0">
-                    <div class="resume">
-                        <!--Content-->
-                        <div class="">
-                            <!--Block content-->
-                            <div class="col-md-12 block-content  pb-10" style="padding: 0;">
-                                <div class="row" style="padding: .5em;">
-                                    <div class="col-md-12  ">
-                                        <!--Timeline-->
-                                        <div class="col-md-12">
-                                            <div>
-                                                <div class="timeline-inner">
-                                                    <div class="col-md-12 " style="display: inline-flex; flex-flow: row wrap; align-items: center;">
-                                                        <div class="col-md-1 "></div>
-                                                        <div class="col-md-3">
-                                                            <img class="img-circle" src="img/img_cv.jpeg" style="padding: 2em; min-width: 120px;">
-                                                        </div>
 
-                                                        <div class="col-md-3 name">
-                                                            <h5>Nom : <span>JAOUAD</span></h5>
-                                                            <h5>Prénom : <span>Mohamed</span></h5>
-                                                            <h5>E-mail : <span>jaouadmohamed0@gmail.com</span></h5>
-                                                            <h5>Téléphone : <span>+212639066684</span></h5>
-                                                            <h5>LinkedIn : <span><a
-                                                                        href="http://www.linkedin.com/in/jaouadmed">@jaouadmed</a></span>
-                                                            </h5>
-                                                            <h5>GitHub : <span><a
-                                                                        href="https://github.com/jaouadmed">@jaouadmed</a></span>
-                                                            </h5>
-                                                        </div>
-                                                        <div class="col-md-4 timeline-inner">
-                                                            <div class="name">
-                                                                <h5>Qui suis-je ?</h5>
-                                                                <p>
-                                                                    <p>Consultant Techno-Fonctionnel Junior chez DXC Technology Maroc, passionné par le développement des solutions logicielles et le Machine Learning.
-                                                                        </br>J'ai hâte d'apprendre et d'offrir de superbes compétences analytiques et informatiques.
-                                                                    </p>
-                                                                </p>
-                                                                <h5>Loisirs & intérêts : </h5>
-                                                                <p>
-                                                                    <p>- La musique, basket-ball.
-                                                                        </br>- La programmation compétitive.
-                                                                    </p>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-1 "></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+<!-- ═══════════════════════════════════ HEADER ══════════════════════════════════ -->
+<div class="header">
+  <div class="header-photo">
+    <img src="img/img_cv.jpeg" alt="Mohamed JAOUAD">
+  </div>
+  <div class="header-info">
+    <div class="header-name">Mohamed JAOUAD</div>
+    <div class="header-title">Consultant Techno-Fonctionnel &nbsp;·&nbsp; Développement Logiciel &amp; Data Engineering</div>
+    <div class="contacts">
+      <span class="contact">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        <a href="mailto:jaouadmohamed0@gmail.com">jaouadmohamed0@gmail.com</a>
+      </span>
+      <span class="contact">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        +212 639 066 684
+      </span>
+      <span class="contact">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <a href="https://linkedin.com/in/jaouadmed">linkedin.com/in/jaouadmed</a>
+      </span>
+      <span class="contact">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        <a href="https://github.com/jaouadmed">github.com/jaouadmed</a>
+      </span>
+      <span class="contact">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Sala Al Jadida, Maroc
+      </span>
+    </div>
+  </div>
+</div>
 
+<!-- ════════════════════════════════════ BODY ═══════════════════════════════════ -->
+<div class="layout">
 
-                                        <!--End timeline-->
-                                    </div>
-                                </div>
-                                <p></p>
-                                <!--Row-->
-                                <div class="col-md-6">
-                                    <!--Row-->
+  <!-- ─────────────────────── SIDEBAR ─────────────────────── -->
+  <div class="sidebar">
 
-                                    <div class="row">
-                                        <div class="col-md-12  ">
-                                            <div class="sub-title">
-                                                <h2 class="uppercase">FORMATIONS</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End row-->
-                                    <!--Row-->
-                                    <div class="row">
-                                        <div class="col-md-12  ">
-                                            <!--Timeline-->
-                                            <div class="">
-                                                <div class="timeline">
-                                                    <div class="timeline-inner">
-                                                        <div class="name">
-                                                            <span class="date">
-                                                                2017 - 2020
-                                                            </span>
-                                                            <h4>
-                                                                ENSET, Mohammedia
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>II - BDCC</h5>
-                                                            <p>
-                                                                <p> Diplôme d'ingénieur d'état en Ingénierie Informatique Big Data & Cloud Computing, ENSET-Mohammedia.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name switched">
-                                                            <span class="date">
-                                                                2015 – 2017
-                                                            </span>
-                                                            <h4>
-                                                                Lycée Ibn-Sina, Kenitra
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>BTS - DSI</h5>
-                                                            <p>
-                                                                <p>Brevet de Technicien Supérieur en Développement des Systèmes d’Informations au centre BTS Ibn-Sina, Kenitra.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name">
-                                                            <span class="date">
-                                                                2015
-                                                            </span>
-                                                            <h4>
-                                                                Lycée Oued-Edahab, Tiflet
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>BAC - PC </h5>
-                                                            <p>
-                                                                <p>Baccalauréat en Sciences Physiques et Chimie au Lycée Oued-Edahab, Tiflet.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--End timeline-->
-                                        </div>
-                                    </div>
-                                    <p></p>
-                                    <div class="row">
-                                        <div class="col-md-12  ">
-                                            <div class="sub-title">
-                                                <h2 class="uppercase">Certifications</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End row-->
-                                    <!--Row-->
-                                    <div class="row">
-                                        <div class="col-md-12  ">
-                                            <!--Timeline-->
-                                            <div class="">
-                                                <div class="timeline">
-                                                    <div class="timeline-inner">
-                                                        <div class="name">
-                                                            <span class="date">
-                                                                2019
-                                                                <em class="right-content">Online</em>
-                                                            </span>
-                                                            <h4>
-                                                                Coursera
-                                                            </h4>
-                                                            <h4><span><a
-                                                                href="https://www.coursera.org/account/accomplishments/verify/Y3WS3FQZWC6J">@Certificat URL</a></span>
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>Machine Learning</h5>
-                                                            <p>
-                                                                <p> Machine Learning par l'Université de Stanford sur Coursera. Certificat obtenu le dimanche 8 décembre 2019 avec une note de 97,3%.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p></p>
-                                    </br>
-                                    <!--End row-->
-                                    <div class="block-content  pb-10">
-                                        <!--Row-->
-                                        <div class="row">
-                                            <div class="col-md-12  ">
-                                                <div class="sub-title">
-                                                    <h2 class="uppercase">expérience</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--End row-->
-                                        <!--Row-->
-                                        <div class="row">
-                                            <div class="col-md-12  ">
-                                                <!--Timeline-->
-                                                <div class="">
-                                                    <div class="timeline">
-                                                        <div class="timeline-inner">
-                                                            <div class="name">
-                                                                <span class="date">
-                                                                    juillet 2021 
-                                                                    <em class="right-content">Actuellement</em>
-                                                                </span>
-                                                                <h4>
-                                                                    DXC Technology Maroc, Technopolis - Sala Al Jadida
-                                                                </h4>
-                                                            </div>
-                                                            <div class="detail">
-                                                                <h5>Consultant Techno-Fonctionnel Junior || GDL, GraphTalk, BDOC</h5>
-                                                                <p>
-                                                                    <p>
-                                                                        Travailler sur une solution d'assurance développée et maintenue par DXC, spécifiquement dans l'extraction de données, le traitement des batch de données et la gestion de documents CRM avec des outils internes (Graphtalk, BDOC).
-                                                                    </p>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-inner">
-                                                            <div class="name switched">
-                                                                <span class="date">
-                                                                    Février 2020 (Durée 6 mois)
-                                                                </span>
-                                                                <h4>
-                                                                    DXC Technology Maroc, Technopolis - Sala Al Jadida
-                                                                </h4>
-                                                            </div>
-                                                            <div class="detail">
-                                                                <h5>Stage de fin d'étude || ELK Stack, Open Distro for ES, Ansible AWX</h5>
-                                                                <p>
-                                                                    <p>
-                                                                        l'Élaboration d'un systeme de surveillance de la production applicative. PFE sous le thème: centralisation des logs au bénéfice du suivi automatisé de la production applicative.
-                                                                    </p>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-inner">
-                                                            <div class="name">
-                                                                <span class="date">
-                                                                    Juin 2019 (Durée 2 mois)
-                                                                </span>
-                                                                <h4>
-                                                                    CameraPack, Tiflet - Rabat
-                                                                </h4>
-                                                            </div>
-                                                            <div class="detail">
-                                                                <h5>Stage ingénieur || JEE, Spring boot, Angular, Jhipster
-                                                                </h5>
-                                                                <p>
-                                                                    <p>
-                                                                        l'Élaboration d'un ERP léger sous forme d'une application Web.
-                                                                        <br>& La mise en place d'un site vitrine.
-                                                                    </p>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-inner">
-                                                            <div class="name switched">
-                                                                <span class="date">
-                                                                    Juin 2018 (Durée 1 mois)
-                                                                </span>
-                                                                <h4>
-                                                                    Ministère de l’Equipement du Transport, de la Logistique et de l’Eau, Rabat
-                                                                </h4>
-                                                            </div>
-                                                            <div class="detail">
-                                                                <h5>Stage d'observation || Java Android, SQLite, Google Sheets, Google Apps Script </h5>
-                                                                <p>
-                                                                    <p>l'Élaboration d'une Application Android de consultation de la situation journalière des principaux grands barrages du Royaume.
-                                                                    </p>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-inner">
-                                                            <div class="name">
-                                                                <span class="date">
-                                                                    Juin 2017 (Durée 1 mois)
-                                                                </span>
-                                                                <h4>
-                                                                    Ministère de l’Equipement du Transport, de la Logistique et de l’Eau, Rabat
-                                                                </h4>
-                                                            </div>
-                                                            <div class="detail">
-                                                                <h5>Stage de fin d'étude pour la formation BTS || VB.Net, MS Access</h5>
-                                                                <p>
-                                                                    <p>l'Élaboration d'une Application Desktop pour la gestion des documents des Marchés.
-                                                                    </p>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-inner">
-                                                            <div class="name switched">
-                                                                <span class="date">
-                                                                    Août 2016
-                                                                    (Durée 1 mois)
-                                                                </span>
-                                                                <h4>
-                                                                    La Délégation Provinciale du MEN, Khemisset
-                                                                </h4>
-                                                            </div>
-                                                            <div class="detail">
-                                                                <h5>Stage d’initiation || VB6, MS Access</h5>
-                                                                <p>
-                                                                    <p>l'Élaboration d'une Application Desktop pour la gestion des dossiers de bourse des élevés du baccalauréat. </p>
-                                                                </p>
-                                                            </div>
-                                                        </div>
+    <!-- COMPÉTENCES -->
+    <div class="section">
+      <div class="section-title">Compétences Techniques</div>
 
-                                                    </div>
-                                                </div>
-                                                <!--End timeline-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End row-->
-                                </div>
-                                <div class="col-md-6  ">
-                                    <div class="row">
-                                        <div class="col-md-12  ">
-                                            <div class="sub-title">
-                                                <h2 class="uppercase">COMPÉTENCES</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Row-->
-                                    <div class="row">
-                                        <div class="col-md-12  ">
-                                            <!--Timeline-->
-                                            <div class="">
-                                                <div class="timeline">
-                                                    <div class="timeline-inner">
-                                                        <div class="name">
-                                                            <h4>
-                                                                Langages de programmation
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <p> GDl (Prolog), C/Cpp, Java, Python, Javascript, PHP, Octave/Matlab (basic), VB.net.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name switched">
-                                                            <h4>
-                                                                SGBD
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <p> MySQL, Microsoft SQL Server, Microsoft Access, Oracle, MongoDB, Elasticsearch.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name">
-                                                            <h4>
-                                                                Conception et Modélisation
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <p> UML, Merise, Jhipster-JDL, Design Patterns.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name switched">
-                                                            <h4>
-                                                                Frameworks, Plate-formes et Technologies Cloud
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <p>
-                                                                <p> OOP, JEE, Spring Framework, Angular, Node.js, Java-Android, JavaFX, Gestion de versions (Git), Les Microservices (Spring Cloud), Containérisation (Docker & Kubernetes), Ansible AWX, La suite
-                                                                    ELK.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name">
-                                                            <h4>
-                                                                Ingénierie des Données et Dataviz
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <p>
-                                                                <p>Kafka, l'Écosystème Hadoop 2.0, Modéliser et Interroger des bases de données SQL & NoSQL, Les Algorithmes du Machine Learning et Deap Learning, Scrapy/XPath, Logstash ETL.
-                                                                    <br/>Kibana, D3.js, BDOC.</p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name switched">
-                                                            <h4>
-                                                                Langues
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <p>
-                                                                <p>Anglais, Français, Arabe et Amazigh</p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p></p>
-                                    <div class="row">
-                                        <div class="col-md-12  ">
-                                            <div class="sub-title">
-                                                <h2 class="uppercase">PROJETS RÉALISÉS</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End row-->
-                                    <!--Row-->
-                                    <div class="row">
-                                        <div class="col-md-12  ">
-                                            <!--Timeline-->
-                                            <div class="">
-                                                <div class="timeline">
-                                                    <div class="timeline-inner">
-                                                        <div class="name ">
-                                                            <span class="date">
-                                                                2020 - 2021
-                                                                <em class="right-content">Freelance</em>
-                                                            </span>
-                                                            <h4>
-                                                                BBS, Casablanca
-
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>Marketplace E-commerce || Prestashop</h5>
-                                                            <p>
-                                                                <p>Marketplace E-commerce smileshop.ma pour la société Beyond Banking Services basée à Casablanca.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name switched">
-                                                            <span class="date">
-                                                                2020
-                                                                <em class="right-content">Freelance</em>
-                                                            </span>
-                                                            <h4>
-                                                                CP TECH MAROC, Tiflet
-
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>Plateforme de commerce électronique || Wordpress</h5>
-                                                            <p>
-                                                                <p>Platforme E-commerce pour la vente des produits et solutions de l'énergie solaire pour la société CP TECH MAROC basée à Tiflet.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name ">
-                                                            <span class="date">
-                                                                2019
-                                                            </span>
-                                                            <h4>
-                                                                ENSET, Mohammedia
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>Compétition Nationale du "Public Speaking"</h5>
-                                                            <p>
-                                                                <p>Participer à l'organisation de "The ESU National Public Speaking Competition, 2019 Edition" au sein de notre école.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name switched">
-                                                            <span class="date">
-                                                                2018
-                                                            </span>
-                                                            <h4>
-                                                                ENSET, Mohammedia
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>Fondation d'un "English Club"</h5>
-                                                            <p>
-                                                                <p>Participer à la fondation et la mise en activité d'un club anglais au sein de notre école (ENSPEC).
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name">
-                                                            <span class="date">
-                                                                2017
-                                                            </span>
-                                                            <h4>
-                                                                Association AHDANE, Mohammedia
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>Formation Développement Web</h5>
-                                                            <p>
-                                                                <p>La préparation et la mise en œuvre d'une formation d'initiation au Développement Web pour les jeunes de l'association AHDANE.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-inner">
-                                                        <div class="name switched">
-                                                            <span class="date">
-                                                                2017
-                                                            </span>
-                                                            <h4>
-                                                                BTS Ibn-Sina, Kenitra
-                                                            </h4>
-                                                        </div>
-                                                        <div class="detail">
-                                                            <h5>BTS PFE || Java Android, SQLite</h5>
-                                                            <p>
-                                                                <p>l'Élaboration d'une Application Android pour faciliter la prise de notes, la gestion des cours et documents qui aide à la révision.
-                                                                </p>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--End timeline-->
-                                        </div>
-                                    </div>
-                                    <!--End row-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Langages de programmation</div>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">C / C++</span>
+          <span class="tag">GDL / Prolog</span>
+          <span class="tag">PHP</span>
+          <span class="tag">VB.Net</span>
+          <span class="tag">Octave / Matlab</span>
         </div>
-        <button class="btn" type="submit" onclick="window.location.href='docs/jaouadmed-resume-fr.pdf'" style="position:absolute; right:60px; top:20px;">
-            <i class="fa fa-download"></i>
-        </button>
-        <button class="btn" type="submit" onclick="window.location.href='./index-en.html'" style="position:absolute; right:15px; top:20px;">En</button>
-        <style type="text/css">
-            body {
-                font-size: 200%;
-            }
-            /* Set the size of 1em to 10px in all browsers */
-        </style>
-</body>
+      </div>
 
+      <div class="skill-group">
+        <div class="skill-group-title">Frameworks &amp; Plateformes</div>
+        <div class="tags">
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Spring Cloud</span>
+          <span class="tag">Angular</span>
+          <span class="tag">JEE</span>
+          <span class="tag">JHipster</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">JavaFX</span>
+          <span class="tag">Android</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Data &amp; Big Data</div>
+        <div class="tags">
+          <span class="tag">Kafka</span>
+          <span class="tag">Hadoop 2.0</span>
+          <span class="tag">Elasticsearch</span>
+          <span class="tag">Logstash ETL</span>
+          <span class="tag">Kibana</span>
+          <span class="tag">Scrapy / XPath</span>
+          <span class="tag">D3.js</span>
+          <span class="tag">ML / Deep Learning</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Bases de données</div>
+        <div class="tags">
+          <span class="tag">MySQL</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">Oracle</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">MS Access</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">DevOps &amp; Outils</div>
+        <div class="tags">
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Ansible AWX</span>
+          <span class="tag">Git</span>
+          <span class="tag">ELK Stack</span>
+          <span class="tag">Open Distro</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Architecture &amp; Modélisation</div>
+        <div class="tags">
+          <span class="tag">Microservices</span>
+          <span class="tag">UML</span>
+          <span class="tag">Merise</span>
+          <span class="tag">Design Patterns</span>
+          <span class="tag">POO</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Domaine &amp; CMS</div>
+        <div class="tags">
+          <span class="tag">GraphTalk</span>
+          <span class="tag">BDOC</span>
+          <span class="tag">PrestaShop</span>
+          <span class="tag">WordPress</span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- LANGUES -->
+    <div class="section">
+      <div class="section-title">Langues</div>
+      <div class="lang-row">
+        <span class="lang-name">Arabe</span>
+        <span class="lang-level">Langue maternelle</span>
+      </div>
+      <div class="lang-row">
+        <span class="lang-name">Tamazight (Amazigh)</span>
+        <span class="lang-level">Langue maternelle</span>
+      </div>
+      <div class="lang-row">
+        <span class="lang-name">Français</span>
+        <span class="lang-level">Courant (C1)</span>
+      </div>
+      <div class="lang-row">
+        <span class="lang-name">Anglais</span>
+        <span class="lang-level">Professionnel (B2+)</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- CENTRES D'INTÉRÊT -->
+    <div class="section">
+      <div class="section-title">Centres d'intérêt</div>
+      <div class="interests-text">
+        Musique &nbsp;·&nbsp; Basketball &nbsp;·&nbsp; Pêche<br>
+        Programmation compétitive
+      </div>
+    </div>
+
+  </div><!-- /sidebar -->
+
+  <!-- ─────────────────────── MAIN ────────────────────── -->
+  <div class="main">
+
+    <!-- PROFIL -->
+    <div class="section">
+      <div class="section-title">Profil Professionnel</div>
+      <p class="summary-text">
+        Ingénieur logiciel et consultant techno-fonctionnel avec plus de 4 ans d'expérience dans les solutions d'assurance d'entreprise, le data engineering et le développement full-stack.
+        Expériences prouvées dans la conception de systèmes de monitoring de production, d'ERP web et de plateformes e-commerce.
+        Passionné par les architectures scalables, les pipelines de données et le code propre.
+        Titulaire d'un diplôme d'ingénieur d'état en Big Data &amp; Cloud Computing.
+      </p>
+    </div>
+
+    <!-- EXPÉRIENCE -->
+    <div class="section">
+      <div class="section-title">Expérience Professionnelle</div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="item-org">DXC Technology Maroc &mdash; Technopolis, Sala Al Jadida</div>
+          <span class="item-date">Juil. 2021 &ndash; Aujourd'hui</span>
+        </div>
+        <div class="item-role">Consultant Techno-Fonctionnel Junior</div>
+        <div class="item-tech">GDL &middot; GraphTalk &middot; BDOC &middot; SQL &middot; Traitement Batch</div>
+        <div class="item-desc">
+          Développement fonctionnel et technique sur la plateforme d'assurance d'entreprise de DXC. Missions principales : pipelines d'extraction de données, traitement de batchs et gestion documentaire CRM via les outils internes (GraphTalk, BDOC). Rédaction de spécifications fonctionnelles et support à la production.
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="item-org">DXC Technology Maroc &mdash; Technopolis, Sala Al Jadida</div>
+          <span class="item-date">Fév. 2020 &middot; 6 mois</span>
+        </div>
+        <div class="item-role">Stage de Fin d'Études (PFE)</div>
+        <div class="item-tech">ELK Stack &middot; Open Distro for ES &middot; Ansible AWX &middot; Logstash</div>
+        <div class="item-desc">
+          Conception et implémentation d'un système de surveillance de la production applicative basé sur la centralisation des logs. Mise en place d'alertes automatisées et de tableaux de bord Kibana pour les équipes DevOps via la suite ELK orchestrée avec Ansible AWX.
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="item-org">CameraPack &mdash; Tiflet / Rabat</div>
+          <span class="item-date">Juin &ndash; Août 2019 &middot; 2 mois</span>
+        </div>
+        <div class="item-role">Stage Ingénieur</div>
+        <div class="item-tech">JEE &middot; Spring Boot &middot; Angular &middot; JHipster</div>
+        <div class="item-desc">
+          Élaboration d'un ERP léger web couvrant la gestion des stocks, des achats et des rapports. Développement full-stack de la modélisation base de données jusqu'au frontend Angular, ainsi qu'un site vitrine.
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="item-org">Ministère de l'Équipement, du Transport, de la Logistique et de l'Eau &mdash; Rabat</div>
+          <span class="item-date">Juin 2018 &middot; 1 mois</span>
+        </div>
+        <div class="item-role">Stage d'Observation</div>
+        <div class="item-tech">Java Android &middot; SQLite &middot; Google Sheets &middot; Apps Script</div>
+        <div class="item-desc">
+          Développement d'une application Android pour le suivi journalier des principaux grands barrages du Royaume, permettant aux agents de terrain de saisir et visualiser les données hydrauliques en temps réel.
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="item-org">Ministère de l'Équipement, du Transport, de la Logistique et de l'Eau &mdash; Rabat</div>
+          <span class="item-date">Juin 2017 &middot; 1 mois</span>
+        </div>
+        <div class="item-role">Stage de Fin d'Études BTS</div>
+        <div class="item-tech">VB.Net &middot; MS Access</div>
+        <div class="item-desc">Développement d'une application desktop pour la gestion des documents de marchés publics.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="item-org">Délégation Provinciale du Ministère de l'Éducation Nationale &mdash; Khemisset</div>
+          <span class="item-date">Août 2016 &middot; 1 mois</span>
+        </div>
+        <div class="item-role">Stage d'Initiation</div>
+        <div class="item-tech">VB6 &middot; MS Access</div>
+        <div class="item-desc">Développement d'une application desktop pour la gestion des dossiers de bourse des élèves bacheliers.</div>
+      </div>
+
+    </div>
+
+    <!-- FORMATIONS -->
+    <div class="section">
+      <div class="section-title">Formations</div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="edu-degree">Diplôme d'Ingénieur d'État — Ingénierie Informatique Big Data &amp; Cloud Computing (II-BDCC)</div>
+          <span class="item-date">2017 – 2020</span>
+        </div>
+        <div class="edu-school">ENSET-Mohammedia, Mohammedia</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="edu-degree">BTS — Développement des Systèmes d'Information (DSI)</div>
+          <span class="item-date">2015 – 2017</span>
+        </div>
+        <div class="edu-school">Lycée Ibn-Sina, Kenitra</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="edu-degree">Baccalauréat — Sciences Physiques et Chimie (PC)</div>
+          <span class="item-date">2015</span>
+        </div>
+        <div class="edu-school">Lycée Oued-Edahab, Tiflet</div>
+      </div>
+
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <div class="section-title">Certifications</div>
+      <div class="item">
+        <div class="item-header">
+          <div class="cert-name">Machine Learning — Université de Stanford / Coursera</div>
+          <span class="item-date">Déc. 2019</span>
+        </div>
+        <div class="cert-detail">
+          Note : <strong>97,3%</strong> &nbsp;&middot;&nbsp;
+          <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/Y3WS3FQZWC6J">Vérifier le certificat ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJETS -->
+    <div class="section">
+      <div class="section-title">Projets Notables &amp; Freelance</div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="proj-name">Marketplace E-commerce — smileshop.ma &nbsp;<span style="font-weight:400;color:#6b7280;">(BBS, Casablanca)</span></div>
+          <span class="item-date">2020–2021 · Freelance</span>
+        </div>
+        <div class="proj-desc">Marketplace PrestaShop pour Beyond Banking Services. Mise en place complète, personnalisation du thème et intégration des paiements.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="proj-name">Plateforme E-commerce — CP TECH MAROC &nbsp;<span style="font-weight:400;color:#6b7280;">(Tiflet)</span></div>
+          <span class="item-date">2020 · Freelance</span>
+        </div>
+        <div class="proj-desc">Site e-commerce WordPress pour la vente de produits et solutions en énergie solaire.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="proj-name">Application Android — Gestion de cours &amp; prise de notes &nbsp;<span style="font-weight:400;color:#6b7280;">(BTS PFE)</span></div>
+          <span class="item-date">2017</span>
+        </div>
+        <div class="proj-desc">Application Android + SQLite pour la prise de notes, la gestion des cours et l'aide à la révision — BTS Ibn-Sina, Kenitra.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="proj-name">Compétition Nationale ESU Public Speaking &nbsp;<span style="font-weight:400;color:#6b7280;">(ENSET)</span></div>
+          <span class="item-date">2019</span>
+        </div>
+        <div class="proj-desc">Co-organisation de la compétition nationale à l'ENSET-Mohammedia (édition 2019).</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="proj-name">Formation Développement Web &nbsp;<span style="font-weight:400;color:#6b7280;">(Association AHDANE)</span></div>
+          <span class="item-date">2017</span>
+        </div>
+        <div class="proj-desc">Conception et animation d'une formation d'initiation au développement web pour les jeunes de l'association.</div>
+      </div>
+
+    </div>
+
+  </div><!-- /main -->
+
+</div><!-- /layout -->
+
+</body>
 </html>
